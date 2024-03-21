@@ -19,6 +19,11 @@ type Account struct {
 	UpdatedAt time.Time `json:"updated_at"`
 }
 
+type TransferRequest struct {
+	ToAccount int `json:"toAccount"`
+	Amount int `json:"amount"`
+}
+
 func NewAccount(fName, lName string) *Account {
 	return &Account{
 		// ID:        rand.Intn(10000),
